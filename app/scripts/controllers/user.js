@@ -8,9 +8,14 @@
  * Controller of the artfirmApp
  */
 angular.module('artfirmApp')
-  .controller('UserCtrl',['$scope', '$state', function ($scope, $state) {
+  .controller('UserCtrl',['$scope', '$state','sessionService','sessionInfo','$log',
+    function ($scope, $state, sessionService, sessionInfo, $log) {
     $scope.submitLogin = function(){
-      console.log($scope.login);
+      sessionService.login($scope.login, changeState);
+    }
+
+    function changeState(response) {
+      alert(sessionInfo.getLoginUser().name + ', Welcome :)');
       $state.go('main');
     }
   }]);
