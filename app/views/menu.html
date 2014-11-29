@@ -1,0 +1,85 @@
+<div class="container">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" ui-sref="main"><img class="main-logo" src="/images/main-logo.png">&nbsp; &nbsp;</a>
+  </div>
+  <div class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+
+      <li class="dropdown">
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-group"></i> Intro <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-header">소개 페이지</li>
+          <li data-ng-class="{active: $state.includes('about')}">
+            <a ui-sref="about">회사소개</a>
+          </li>
+          <li data-ng-class="{active: $state.includes('intro')}">
+            <a ui-sref="intro">인사말</a>
+          </li>
+          <li data-ng-class="{ active: $state.includes('map') }">
+            <a ui-sref="map">오시는 길</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-edit"></i> Q&A <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-header">소개 페이지</li>
+          <li data-ng-class="{active: $state.includes('about')}">
+            <a ui-sref="about">회사소개</a>
+          </li>
+          <li data-ng-class="{active: $state.includes('intro')}">
+            <a ui-sref="intro">인사말</a>
+          </li>
+          <li data-ng-class="{ active: $state.includes('map') }">
+            <a ui-sref="map">오시는 길</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope-o"></i> Contact <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-header">소개 페이지</li>
+          <li data-ng-class="{active: $state.includes('about')}">
+            <a ui-sref="about">회사소개</a>
+          </li>
+          <li data-ng-class="{active: $state.includes('intro')}">
+            <a ui-sref="intro">인사말</a>
+          </li>
+          <li data-ng-class="{ active: $state.includes('map') }">
+            <a ui-sref="map">오시는 길</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+      <li ng-hide="loginUser">
+        <a ui-sref="login"><i class="fa fa-circle-o-notch"></i> Login</a>
+      </li>
+        <li ng-hide="loginUser">
+          <a ui-sref="join"><i class="fa fa-child"></i> Join</a>
+        </li>
+      <li class="dropdown" ng-show="loginUser">
+        <a href="" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-gear"></i> My Page <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li data-ng-class="{active: $state.includes('myinfo')}">
+            <a ui-sref="myinfo">마이 페이지</a>
+          </li>
+          <li data-ng-class="{active: $state.includes('myposts')}">
+            <a ui-sref="myposts">내가 쓴 글</a>
+          </li>
+          <li>
+            <a href="">로그아웃</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div><!--/.nav-collapse -->
+</div>
